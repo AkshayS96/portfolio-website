@@ -5,7 +5,11 @@
       <v-col cols="12">
         <v-row align="center" justify="center">
           <v-col align="center" justify="center">
-            <v-img src="/my_image.jpg" aspect-ratio="1" class="image"></v-img>
+            <v-img
+              src="@/assets/my_image.jpg"
+              aspect-ratio="1"
+              class="image"
+            ></v-img>
           </v-col>
         </v-row>
         <v-row>
