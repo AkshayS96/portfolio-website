@@ -11,12 +11,7 @@
       v-for="(projectRow, index) in projects"
       :key="index"
     >
-      <v-col
-        v-for="project in projectRow"
-        :key="project.id"
-        align="center"
-        justify="center"
-      >
+      <v-col v-for="project in projectRow" :key="project.id" justify="center">
         <v-card
           class="elevation-2 d-flex flex-column"
           min-height="200"
