@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app collapse>
+    <v-app-bar app collapse fixed tile>
       <v-app-bar-nav-icon @click="drawer = !drawer"
         ><v-icon>mdi-magnify</v-icon></v-app-bar-nav-icon
       >
@@ -35,7 +35,11 @@
     </v-bottom-navigation>
 
     <v-content>
+      <!-- <transition
+          :name="transitionName"
+      > -->
       <router-view></router-view>
+      <!-- </transition> -->
     </v-content>
   </v-app>
 </template>

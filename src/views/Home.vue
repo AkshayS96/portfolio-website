@@ -1,6 +1,6 @@
 // Things I need to do in home page // 1. logo // 2. name // 3. contact
 <template>
-  <v-container>
+  <v-container class="home">
     <v-row align="center" justify="center">
       <v-col cols="12">
         <v-row align="center" justify="center">
@@ -14,8 +14,8 @@
         </v-row>
         <v-row>
           <v-col align="center" justify="center">
-            <span class="nameTitle"
-              >Hi, I'm
+            <span class="nameTitle">
+              Hi, I'm
               <h1>Akshay Solanki</h1></span
             >
             <span><b>Software Engineer</b></span>
@@ -36,6 +36,14 @@
         </v-row>
       </v-col>
     </v-row>
+    <v-spacer></v-spacer>
+    <v-row align="center" justify="center">
+      <v-col align="center" justify="center">
+        <v-btn outlined :href="resumeLink" target="_blank">
+          Résumé
+        </v-btn>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 <script>
@@ -44,37 +52,40 @@ export default {
   name: "Home",
   data() {
     return {
+      snackbar: true,
+      resumeLink:
+        "https://drive.google.com/file/d/1oBZW3J6dmA5pTVMN7878Lgn6cgIdZftu/view?usp=sharing",
       icons: [
         {
           id: 1,
-          value: "mdi-facebook",
-          type: "facebook",
-          link: "https://www.facebook.com/akshay.solanki.1428"
-        },
-        {
-          id: 2,
           value: "mdi-linkedin",
           type: "linkiden",
           link: "https://www.linkedin.com/in/akshays96/"
         },
         {
-          id: 3,
+          id: 2,
           value: "mdi-github",
           type: "github",
           link: "https://github.com/AkshayS96"
         },
         {
-          id: 4,
+          id: 3,
           value: "mdi-stack-overflow",
           type: "stackoverflow",
           link:
             "https://stackoverflow.com/users/8142023/akshay-solanki?tab=profile"
         },
         {
-          id: 5,
+          id: 4,
           value: "mdi-gmail",
           type: "gmail",
           link: "mailto:asolanki786@gmail.com"
+        },
+        {
+          id: 5,
+          value: "mdi-facebook",
+          type: "facebook",
+          link: "https://www.facebook.com/akshay.solanki.1428"
         }
       ]
     };
@@ -91,5 +102,6 @@ export default {
 
 .nameTitle {
   font-family: "Open Sans", sans-serif;
+  font-size: 20px;
 }
 </style>
