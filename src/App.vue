@@ -46,6 +46,7 @@
 
 <script>
 import WebsiteSearch from "./components/WebsiteSearch";
+const axios = require("axios");
 const mousetrap = require("mousetrap");
 
 export default {
@@ -93,6 +94,26 @@ export default {
     const self = this;
     mousetrap.bind("command+/", () => {
       self.drawer = !self.drawer;
+    });
+    // Fire a request to slack channel
+
+    axios({
+      method: "get",
+      url: "https://api.ipify.org?format=json"
+    }).then(function(response) {
+      const data = JSON.stringify({
+        text: "```" + JSON.stringify(response.data) + "```"
+      });
+      console.log(data);
+      axios({
+        method: "post",
+        url:
+          "https://hooks.slack.com/services/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",
+        data,
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        }
+      });
     });
   },
   components: {
