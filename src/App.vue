@@ -38,7 +38,9 @@
       <!-- <transition
           :name="transitionName"
       > -->
-      <router-view></router-view>
+      <vue-page-transition :name="transitionName">
+        <router-view></router-view>
+      </vue-page-transition>
       <!-- </transition> -->
     </v-content>
   </v-app>
@@ -56,6 +58,7 @@ export default {
     themeIconColor: "yellow",
     buttonElevation: 10,
     drawer: false,
+    transitionName: "fade",
     routers: [
       {
         id: 1,
@@ -83,6 +86,7 @@ export default {
         ? "mdi-weather-sunny"
         : "mdi-weather-night";
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
+      // change background here
     }
   },
   computed: {
@@ -95,25 +99,6 @@ export default {
     mousetrap.bind("command+/", () => {
       self.drawer = !self.drawer;
     });
-    // // Fire a request to slack channel
-    // axios({
-    //   method: "get",
-    //   url: "https://api.ipify.org?format=json"
-    // }).then(function(response) {
-    //   const data = JSON.stringify({
-    //     text: "```" + JSON.stringify(response.data) + "```"
-    //   });
-    //   console.log(data);
-    //   axios({
-    //     method: "post",
-    //     url:
-    //       "https://hooks.slack.com/services/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",
-    //     data,
-    //     headers: {
-    //       "Content-Type": "application/x-www-form-urlencoded"
-    //     }
-    //   });
-    // });
   },
   components: {
     WebsiteSearch: WebsiteSearch
