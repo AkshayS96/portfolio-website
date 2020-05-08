@@ -10,7 +10,7 @@
         <v-timeline-item v-for="item in timelineItems" :key="item.id" large>
           <template v-slot:icon>
             <v-avatar>
-              <img :src="require('@/assets/my_image.jpg')" />
+              <img :src="require('@/assets/myAvatar.svg')" />
             </v-avatar>
           </template>
           <template v-slot:opposite>

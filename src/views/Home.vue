@@ -6,7 +6,7 @@
         <v-row align="center" justify="center">
           <v-col align="center" justify="center">
             <v-img
-              :src="require('@/assets/my_image.jpg')"
+              :src="require('@/assets/myAvatar.svg')"
               aspect-ratio="1"
               class="image"
             ></v-img>
@@ -16,9 +16,9 @@
           <v-col align="center" justify="center">
             <span class="nameTitle">
               Hi, I'm
-              <h1>Akshay Solanki</h1></span
+              <h1>Akshay Solanki👓</h1></span
             >
-            <span><b>Software Engineer</b></span>
+            <span><b>Software Engineer</b>👨‍💻</span>
           </v-col>
         </v-row>
         <v-row align="center" justify="center">
@@ -97,11 +97,10 @@ export default {
   height: 250px;
   width: 250px;
   border-radius: 50%;
-  border: 2px solid;
 }
 
 .nameTitle {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto Mono", monospace;
   font-size: 20px;
 }
 </style>
