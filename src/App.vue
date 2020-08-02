@@ -1,17 +1,15 @@
 <template>
   <v-app>
     <v-app-bar app collapse fixed tile>
-      <v-app-bar-nav-icon @click="drawer = !drawer"
-        ><v-icon>mdi-magnify</v-icon></v-app-bar-nav-icon
-      >
+      <v-app-bar-nav-icon @click="drawer = !drawer">
+        <v-icon>mdi-magnify</v-icon>
+      </v-app-bar-nav-icon>
       <!-- <v-toolbar-title ><b><router-link to="/" id="title">Akshay Solanki</router-link></b></v-toolbar-title> -->
       <!-- <v-spacer></v-spacer> -->
       <v-tooltip bottom>
         <template v-slot:activator="{ on }">
           <v-btn icon @click="changeTheme" v-on="on">
-            <v-icon>
-              {{ themeIcon }}
-            </v-icon>
+            <v-icon>{{ themeIcon }}</v-icon>
           </v-btn>
         </template>
         <span>{{ currentTheme }}</span>
@@ -37,7 +35,7 @@
     <v-content>
       <!-- <transition
           :name="transitionName"
-      > -->
+      >-->
       <vue-page-transition :name="transitionName">
         <router-view></router-view>
       </vue-page-transition>
@@ -48,7 +46,7 @@
 
 <script>
 import WebsiteSearch from "./components/WebsiteSearch";
-// const axios = require("axios");
+const axios = require("axios");
 const mousetrap = require("mousetrap");
 
 export default {
@@ -99,6 +97,20 @@ export default {
     mousetrap.bind("command+/", () => {
       self.drawer = !self.drawer;
     });
+    axios.post(
+      "https://mywebsite12345.herokuapp.com/post",
+      {
+        data: {
+          payload: "another person"
+        }
+      },
+      {
+        headers: {
+          "Content-Type": "application/json",
+          apikey: "8791"
+        }
+      }
+    );
   },
   components: {
     WebsiteSearch: WebsiteSearch
