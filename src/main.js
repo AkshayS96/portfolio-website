@@ -7,8 +7,10 @@ import VuePageTransition from "vue-page-transition";
 
 Vue.config.productionTip = false;
 
+// Adding library for transition
 Vue.use(VuePageTransition);
 
+// Vue config object with router, store and vuetify css library
 new Vue({
   router,
   store,
