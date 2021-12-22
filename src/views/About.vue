@@ -36,49 +36,55 @@ export default {
     return {
       timelineItems: [
         {
-          id: 1,
-          year: "Janurary 2020",
+          id: 8,
+          year: "October 2021",
+          description: "Joined <a href='https://www.amazon.com' target='_blank'>Amazon</a> as a Software Development Engineer 2 in Performance Advertising team.",
+          title: 'Mumbai &nbsp; <i class="mdi mdi-airplane-takeoff"></i> &nbsp; Bangalore'
+        },
+        {
+          id: 7,
+          year: "January 2020",
           description:
-            "Joined <a href='https://clevertap.com' target='_blank'>CleverTap</a> as a Software Engineer. Currently, I am a part of analytics team.",
+            "Joined <a href='https://clevertap.com' target='_blank'>CleverTap</a> as a Software Engineer 1. Worked in multiple teams and delivered several high impact projects",
           title:
             'Gurugram &nbsp; <i class="mdi mdi-airplane-takeoff"></i> &nbsp; Mumbai'
         },
         {
-          id: 5,
+          id: 6,
           year: "May 2019",
           description:
             "Joined <a href='https://shipsy.in/' target='_blank'>Shipsy</a> as software engineer. I was a part of team that was creating solutions for Shipping Industry.",
           title: 'Srinagar &nbsp; <i class="mdi mdi-train"></i> &nbsp; Gurugram'
         },
         {
-          id: 2,
+          id: 5,
           year: "May 2019",
           description:
             'Graduated From <a href="http://nituk.ac.in/" target="_blank">NIT Uttarakhand</a> with a overall CGPA of <b>9.24/10</b>.',
           title: 'Graduation &nbsp; <i class="mdi mdi-school"></i>'
         },
         {
-          id: 3,
+          id: 4,
           year: "July 2018",
           description:
             "Joined <a href='https://shipsy.in/' target='_blank'>Shipsy</a> as Data Science Intern for 6 months",
           title: "Data Science Intern @Shipsy"
         },
         {
-          id: 4,
+          id: 3,
           year: "June 2017",
           description:
             'Joined <a href="https://www.drdo.gov.in/labs-and-establishments/instruments-research-development-establishment-irde" target="_blank">IRDE(DRDO) Dehradun</a> as a summer intern in naval systems laboratory for 2 months',
           title: "IRDE Dehradun (DRDO)"
         },
         {
-          id: 6,
+          id: 2,
           year: "July 2015",
           description: "Started my graduation at NIT Uttarakhand.",
           title: 'Computer Science @NITUK<i class="mdi mdi-school"></i>'
         },
         {
-          id: 7,
+          id: 1,
           year: "May 2014",
           description:
             "Completed my schooling from Kendriya Vidyalaya muzaffarnagar with <b>95.2%</b> in Class 12th",
