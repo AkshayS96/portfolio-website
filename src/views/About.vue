@@ -36,10 +36,20 @@ export default {
     return {
       timelineItems: [
         {
+          id: 9,
+          year: "January 2022",
+          description:
+            "Joined <a href='https://about.facebook.com/meta' target='_blank'>Meta</a> as a Software Engineer(E4).",
+          title:
+            'Bangalore &nbsp; <i class="mdi mdi-airplane-takeoff"></i> &nbsp; London'
+        },
+        {
           id: 8,
-          year: "October 2021",
-          description: "Joined <a href='https://www.amazon.com' target='_blank'>Amazon</a> as a Software Development Engineer 2 in Performance Advertising team.",
-          title: 'Mumbai &nbsp; <i class="mdi mdi-airplane-takeoff"></i> &nbsp; Bangalore'
+          year: "November 2021",
+          description:
+            "Joined <a href='https://www.amazon.com' target='_blank'>Amazon</a> as a Software Development Engineer 2 in Performance Advertising team.",
+          title:
+            'Mumbai &nbsp; <i class="mdi mdi-airplane-takeoff"></i> &nbsp; Bangalore'
         },
         {
           id: 7,
