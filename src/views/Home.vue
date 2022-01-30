@@ -1,4 +1,3 @@
-// Things I need to do in home page // 1. logo // 2. name // 3. contact
 <template>
   <v-container class="home">
     <v-row align="center" justify="center">
@@ -18,7 +17,7 @@
               Hi, I'm
               <h1>Akshay Solanki👓</h1></span
             >
-            <span><b>Software Engineer</b>👨‍💻</span>
+            <span>👨‍💻<b>Software Engineer @ Meta London</b> </span>
           </v-col>
         </v-row>
         <v-row align="center" justify="center">
@@ -54,7 +53,7 @@ export default {
     return {
       snackbar: true,
       resumeLink:
-        "https://drive.google.com/file/d/1oBZW3J6dmA5pTVMN7878Lgn6cgIdZftu/view?usp=sharing",
+        "https://drive.google.com/file/d/1jIKdqlbBRANXyAefV7uCJVEYgOfA-HY_/view?usp=sharing",
       icons: [
         {
           id: 1,
