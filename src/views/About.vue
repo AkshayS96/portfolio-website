@@ -41,7 +41,7 @@ export default {
           description:
             "Joined <a href='https://about.facebook.com/meta' target='_blank'>Meta</a> as a Software Engineer(E4).",
           title:
-            'Bangalore &nbsp; <i class="mdi mdi-airplane-takeoff"></i> &nbsp; London'
+            'India &nbsp; <i class="mdi mdi-airplane-takeoff"></i> &nbsp; London'
         },
         {
           id: 8,

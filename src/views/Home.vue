@@ -92,6 +92,10 @@ export default {
 };
 </script>
 <style scoped>
+.home {
+  margin-top: 5%;
+}
+
 .image {
   height: 250px;
   width: 250px;

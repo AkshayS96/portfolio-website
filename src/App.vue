@@ -1,11 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app collapse fixed tile>
-      <v-app-bar-nav-icon @click="drawer = !drawer">
-        <v-icon>mdi-magnify</v-icon>
-      </v-app-bar-nav-icon>
-      <!-- <v-toolbar-title ><b><router-link to="/" id="title">Akshay Solanki</router-link></b></v-toolbar-title> -->
-      <!-- <v-spacer></v-spacer> -->
+    <!-- <v-app-bar app collapse tile>
       <v-tooltip bottom>
         <template v-slot:activator="{ on }">
           <v-btn icon @click="changeTheme" v-on="on">
@@ -13,17 +8,39 @@
           </v-btn>
         </template>
         <span>{{ currentTheme }}</span>
-      </v-tooltip>
-    </v-app-bar>
+    
+    </v-app-bar> -->
 
-    <v-navigation-drawer v-model="drawer" absolute temporary right width="30%">
-      <WebsiteSearch></WebsiteSearch>
-    </v-navigation-drawer>
+    <div class="ma-4">
+      <v-tooltip bottom>
+        <template v-slot:activator="{ on }">
+          <v-btn
+            fab
+            color="outlined"
+            style="
+          width: fit-content;
+          border-radius: 100px;
+          padding: 16px;
+        "
+            @click="changeTheme"
+            v-on="on"
+          >
+            <v-icon>{{ themeIcon }}</v-icon>
+          </v-btn>
+        </template>
+        <span>{{ currentTheme }}</span>
+      </v-tooltip>
+    </div>
 
     <v-bottom-navigation app shift>
       <v-tooltip v-for="route in routers" :key="route.id" top>
         <template v-slot:activator="{ on }">
-          <v-btn v-on="on" :to="route.link" :target="route.target">
+          <v-btn
+            v-on="on"
+            :to="route.link"
+            :target="route.target"
+            style="height: 100%;"
+          >
             <span>{{ route.title }}</span>
             <v-icon>{{ route.icon }}</v-icon>
           </v-btn>
@@ -45,10 +62,6 @@
 </template>
 
 <script>
-import WebsiteSearch from "./components/WebsiteSearch";
-const axios = require("axios");
-const mousetrap = require("mousetrap");
-
 export default {
   name: "App",
   data: () => ({
@@ -91,29 +104,6 @@ export default {
     currentTheme() {
       return this.$vuetify.theme.dark ? "Dark" : "Light";
     }
-  },
-  mounted() {
-    const self = this;
-    mousetrap.bind("command+/", () => {
-      self.drawer = !self.drawer;
-    });
-    axios.post(
-      "https://mywebsite12345.herokuapp.com/post",
-      {
-        data: {
-          payload: "another person"
-        }
-      },
-      {
-        headers: {
-          "Content-Type": "application/json",
-          apikey: "8791"
-        }
-      }
-    );
-  },
-  components: {
-    WebsiteSearch: WebsiteSearch
   }
 };
 </script>
