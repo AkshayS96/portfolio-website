@@ -17,7 +17,7 @@
               Hi, I'm
               <h1>Akshay Solanki👓</h1></span
             >
-            <span>👨‍💻<b>Software Engineer @ Meta London</b> </span>
+            <span>👨‍💻<b> Just your next door Software Engineer</b> </span>
           </v-col>
         </v-row>
         <v-row align="center" justify="center">

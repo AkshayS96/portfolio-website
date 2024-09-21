@@ -17,7 +17,7 @@
             text
             :href="link.link"
             target="_blank"
-            :key="project.id - index"
+            :key="index"
           >
             {{ link.linkType }}
             <v-icon>mdi-code-greater-than</v-icon>
@@ -36,6 +36,23 @@ export default {
       projects: [
         {
           id: 1,
+          title: "<b>Coro</b>",
+          description:
+            "Coro - Command Bar for Custom Commands, Bookmarks, and Search",
+          links: [
+            {
+              linkType: "Chrome",
+              link:
+                "https://chromewebstore.google.com/detail/coro/amjncghjhidkofkogknjbchdcakdhdld"
+            },
+            {
+              linkType: "Product Hunt",
+              link: "https://www.producthunt.com/posts/coro-2"
+            }
+          ]
+        },
+        {
+          id: 2,
           title: "<b>Spaces</b>",
           description:
             "Spaces is a Chrome extension that helps you organize your browsing with multiple Spaces and folders. Save, manage, and restore your tabs efficiently.",
@@ -56,7 +73,7 @@ export default {
           ]
         },
         {
-          id: 1,
+          id: 3,
           title:
             "<b>VEDL: A Novel Video Event Searching Technique Using Deep Learning</b>",
           description:
@@ -70,9 +87,10 @@ export default {
           ]
         },
         {
-          id: 2,
+          id: 4,
           title: "<b>Command line news</b>",
-          description: `A command line interface for reading news written in golang`,
+          description:
+            "A command line interface for reading news written in golang",
           links: [
             {
               linkType: "Github",
@@ -81,7 +99,7 @@ export default {
           ]
         },
         {
-          id: 3,
+          id: 5,
           title: "<b>JavaFX Media Player</b>",
           description: "A media player written in java using vlcj library",
           links: [
